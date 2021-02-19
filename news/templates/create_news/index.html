@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+<link rel="stylesheet" target="_blank" href="{% static 'css/base.css' %}">
+    <title>HyperNews Portal</title>
+</head>
+<body>
+<h2>Create news</h2>
+<form action="/news/create/" method="post">
+{% csrf_token %}
+  <input placeholder="Enter title" name="title">
+  <br/>
+  <input placeholder="Enter text" name="text">
+  <br/>
+  <button type="submit">Create news</button>
+  <a target="_blank" href="/news/">Go back</a>
+</form>
+</body>
+</html>

@@ -1,0 +1,8 @@
+{% for key, val in content %}
+<h4>{{ key }}</h4>
+<ul>
+    {% for news in val %}
+  <li><a target="_blank" href="/news/{{news.link}}">{{ news.title }}</a></li>
+    {% endfor %}
+</ul>
+ {% endfor %}

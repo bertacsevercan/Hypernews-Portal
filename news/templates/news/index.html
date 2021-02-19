@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+<link rel="stylesheet" target="_blank" href="{% static 'css/base.css' %}">
+    <title>HyperNews Portal</title>
+</head>
+<body>
+<h2>Hyper news</h2>
+
+{% include "search_news/index.html" %}
+
+{% include "list_news/index.html" %}
+
+
+{%comment%}
+{% if news4  %}
+<h4>2021-02-17</h4>
+ <ul>
+     <li><a href="/news/{{news4.link}}/">News 4</a></li>
+ </ul>
+{% endif %}
+<h4>2020-02-10</h4>
+<ul>
+  <li><a href="/news/2/">News 2</a></li>
+</ul>
+<h4>2020-02-09</h4>
+<ul>
+  <li><a href="/news/1/">News 1</a></li>
+  <li><a href="/news/3/">News 3</a></li>
+</ul>
+{%endcomment%}
+
+
+<a target="_blank" href="/news/create/">Create news</a>
+</body>
+</html>

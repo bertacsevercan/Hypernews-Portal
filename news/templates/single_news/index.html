@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% load static %}
+<link rel="stylesheet" target="_blank" href="{% static 'css/base.css' %}">
+    <title>HyperNews Portal</title>
+</head>
+<body>
+<div>
+<h2>{{item.title}}</h2>
+<p>{{item.created}}</p>
+<p>{{item.text}}</p>
+<a target="_blank" href="/news/">Go back</a>
+</div>
+</body>
+</html>
